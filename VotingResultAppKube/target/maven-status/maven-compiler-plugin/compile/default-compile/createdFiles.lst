@@ -1,0 +1,6 @@
+com/kube/vote/model/Animal.class
+com/kube/vote/model/Vote.class
+com/kube/vote/repository/VotingRepository.class
+com/kube/vote/controller/ResultController.class
+com/kube/vote/model/Vote$VoteBuilder.class
+com/kube/vote/VotingResultAppKubeApplication.class

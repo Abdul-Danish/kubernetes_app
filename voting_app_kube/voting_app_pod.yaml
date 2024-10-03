@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: voting-app-pod
+  labels:
+    name: voting-app-pod
+    app: demo-voting-app
+
+spec:
+  containers:
+    - name: voting-app
+      image: danishdd/voting-app:latest
+      ports:
+        - containerPort: 80
+      env:
+        - name: MONGO_HOST
+          value: "mongo-service"
+        - name: MONGO_PORT
+          value: "27017"
+        - name: MONGO_DATABASE
+          value: "Votes_Server"
+
+        # - name: SERVICE_DB_URL
+        #   value: mongodb://mongo-service:27017/?authSource=admin&retryWrites=false
+        # - name: SERVICE_DB
+        #   value: Votes_Server
+
+        # - name: SERVICE_DB_URL
+        #   value: "mongodb://mongo-service:27017/?authSource=admin&retryWrites=false"
+        # - name: SERVICE_DB
+        #   value: Votes_Server

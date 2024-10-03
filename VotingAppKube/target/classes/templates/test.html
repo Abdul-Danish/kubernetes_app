@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en' xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Create Form</title>
+
+</head>
+<body>
+
+	<div class="container">
+		
+		<h2>Save AirCraft</h2>
+		
+		<form action="#" th:action="@{/api/v1//vote/add}"  th:object="${airCraft}" 
+			method="POST">
+			
+			<input type="text" th:field="*{airCraftId}" placeholder="Enter it's Id"
+					class="form-control mb-4 col-2">
+			
+			<input type="text" th:field="*{airCraftFamily}" placeholder="AirCraft's Name"
+					class="form-control mb-4 col-2">
+			
+			<input type="text" th:field="*{airCraftModel}" placeholder="Enter it's Model"
+					class="form-control mb-4 col-2">
+			
+			<input type="text" th:field="*{airCraftEngines}" placeholder="AirCraft's Engines"
+					class="form-control mb-4 col-2">
+			
+			<input type="text" th:field="*{airCraftType}" placeholder="Enter it's Type"
+					class="form-control mb-4 col-2">
+					
+			<button type="submit" class="btn btn-info">Save AirCraft</button>
+		</form>
+		
+	</div>
+
+</body>
+</html>
